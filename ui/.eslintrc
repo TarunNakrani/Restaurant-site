@@ -1,0 +1,79 @@
+{
+	"extends": [
+		"wesbos",
+		"plugin:react-perf/recommended",
+		"plugin:@next/next/recommended",
+		"plugin:prettier/recommended"
+	],
+	"plugins": [
+		"react-perf"
+	],
+	"rules": {
+		"no-nested-ternary": 0,
+		"import/no-anonymous-default-export": "warn",
+		"react/no-danger": 0,
+		"react/prop-types": [
+			"error",
+			{
+				"skipUndeclared": true
+			}
+		],
+		"arrow-parens": [
+			2,
+			"as-needed"
+		],
+		"jsx-a11y/alt-text": [
+			"warn",
+			{
+				"elements": [
+					"img"
+				],
+				"img": [
+					"Image"
+				]
+			}
+		],
+		"jsx-a11y/label-has-associated-control": [
+			"error",
+			{
+				"required": {
+					"some": [
+						"nesting",
+						"id"
+					]
+				}
+			}
+		],
+		"react-perf/jsx-no-new-object-as-prop": [
+			"error",
+			{
+				"nativeAllowList": "all"
+			}
+		],
+		"react-perf/jsx-no-new-array-as-prop": [
+			"error",
+			{
+				"nativeAllowList": "all"
+			}
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"trailingComma": "es5",
+				"singleQuote": true,
+				"printWidth": 120,
+				"tabWidth": 4,
+				"semi": false,
+				"endOfLine": "auto",
+				"arrowParens": "avoid"
+			}
+		]
+	},
+	"settings": {
+		"import/resolver": {
+			"jsconfig": {
+				"config": "jsconfig.json"
+			}
+		}
+	}
+}
